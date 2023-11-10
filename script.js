@@ -83,10 +83,23 @@ tabs1.forEach((tab, i) => {
 
 // Carousel code
 
+let rewardData=[
+    "User recieves total 25% of the beans pot.",
+    "User recieves amazon gift card.",
+    "User recieves a celebration theme.",
+    "User recieves a fury profile theme.",
+    "User recieves a Superstar profile badge.",
+    "User recieves a web page mention.",
+    "User recieves a Pk superstar theme.",
+]
+
 let leftArrow = document.querySelector(".left");
 let rightArrow = document.querySelector(".right");
-
+let rewardText=document.querySelector(".reward-text")
 let prizes = document.querySelectorAll(".prizes");
+let rewardContainer= document.querySelector('.rewards');
+let currentId= +(rewardContainer.getAttribute("data-current"));
+console.log(currentId)
 
 rightArrow.addEventListener("click", () => {
   let currentPrize = document.querySelector(".prizes.active");
@@ -97,10 +110,14 @@ rightArrow.addEventListener("click", () => {
   ) {
     console.log(currentPrize.nextElementSibling);
     currentPrize.nextElementSibling.classList.add("active");
+    currentId+=1;
   } else {
     prizes[0].classList.add("active");
+    currentId=0;
   }
   currentPrize.classList.remove("active");
+  rewardContainer.setAttribute("data-current",currentId);
+  rewardText.innerHTML=rewardData[currentId];
 });
 
 leftArrow.addEventListener("click", () => {
@@ -112,10 +129,14 @@ leftArrow.addEventListener("click", () => {
   ) {
     console.log(currentPrize.previousElementSibling);
     currentPrize.previousElementSibling.classList.add("active");
+    currentId-=1
   } else {
     prizes[prizes.length - 1].classList.add("active");
+    currentId=prizes.length-1;
   }
   currentPrize.classList.remove("active");
+  rewardContainer.setAttribute("data-current",currentId);
+  rewardText.innerHTML=rewardData[currentId];
 });
 
 // Fetching schedule data from spreadsheet.
