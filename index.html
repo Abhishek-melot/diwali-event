@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Event</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Banner section Pk Independence -->
+    <header>
+        <img class="header-img" src="assets/img/Header.png" alt="Header">
+        <button class="guide-button" onclick="showDialog()">
+            <img src="assets/img/btn/Guide-btn.png" alt="guide-button">
+        </button>
+        <dialog id="modal">
+
+            <div class="howToPlay">
+                <img src="assets/img/tag/Guide tag.png" alt="heading">
+
+                <ul>
+                    <li>1.) Top 14 Dancers, 14 Singers talents have to register their ids with SK employees to participate in this event.</li>
+                    <li>2.) Pk Battle will be held on Diwali Day.</li>
+                    <li>3.) Dancers and Singers need to perform for 5-6 min in the pk battle, and fashion talents need to wear any traditional outfit for the pk.</li>
+                    <li>4.) PK match will be held between the talents from same category, Dancer go against dancer, Singers go against singer, Fashion go against fashion.</li>
+                    <li>5.) Talents need to come live 15 min before the PK Battle, there will be a 15-min official PK match scheduled for the event.</li>
+                    <li>6.) First Talent to the left on the webpage schedule, will start the performance first and will perform for first 5 – 6 Min, then next talent will perform for 5 – 6 Min.</li>
+                    <li>7.) Talents and User will be ranked on the leaderboard based on the maximum beans received and spent respectively in the event.</li>
+                    <li>8.) Talent ranking will be separate for each category.</li>
+                    <li>9.) The winner of this tournament will be decided based on the beans they receive in the Final Round.</li>
+                </ul>
+            </div>
+
+            <button class="close" onclick="closeDialog()">
+                <img src="assets/img/btn/cross.png" alt="close">
+            </button>
+        </dialog>
+    </header>
+    <main>
+        <!-- Rewards section -->
+        <section class="tab-btns-section">
+            <div class="tab-btns"> 
+                <button class="user active tab">
+
+                </button>
+                <button class="talent tab">
+                    
+                </button>
+            </div>
+
+            <div class="round-btns">
+
+                <button class="round-1">
+                    
+                </button>
+                <button class="round-2">
+                        
+                </button>
+            </div>
+
+            <div class="tab-content active"> 
+        
+                <div class="reward-tag">
+                    <img src="./assets/img/tag/Rewards tag.png" alt="rewards">
+                </div>
+                
+              <div class="rewards">
+                <div class="reward-top">
+                    <span>TOP 1</span>
+                    <img src="assets/img/rank display.png" alt="rankdisplay">
+                </div>
+                <button class="arrow left">
+                    <img src="assets/img/btn/LeftArrow.png" alt="left-arrow">
+                </button>
+
+                    <div class="prizes active" >
+                        <div class="stage">
+                            <img src="assets/img/Rewards/Beans Pot.png" alt="badge">
+                            <span>Beans Pot</span>
+                        </div>
+                    </div>
+                    <div class="prizes" >
+                        <div class="stage">
+                            <img src="assets/img/Rewards/Amazon gift card.png" alt="frame">
+                            <span>Amazon Gift card</span>
+                        </div>
+                    </div>
+                    <div class="prizes" >
+                        <div class="stage">
+                            <img src="assets/img/Rewards/Celebration theme.png" alt="frame">
+                            <span>Celebration Theme</span>
+                        </div>
+                    </div>
+                    <div class="prizes" >
+                        <div class="stage">
+                            <img src="assets/img/Rewards/Fury profile frame.png" alt="frame">
+                            <span>Fury Profile Frame</span>
+                        </div>
+                    </div>
+                    <div class="prizes" >
+                        <div class="stage">
+                            <img src="assets/img/Rewards/Celebration theme.png" alt="frame">
+                            <span>Amazon Gift card</span>
+                        </div>
+                    </div>
+                    <div class="prizes" >
+                        <div class="stage">
+                            <img src="assets/img/Rewards/Pk superstar badge.png" alt="frame">
+                            <span>SuperStar Badge</span>
+                        </div>
+                    </div>
+                    <div class="prizes" >
+                        <div class="stage">
+                            <img src="assets/img/Rewards/Web page mention.png" alt="frame">
+                            <span>Web page mention</span>
+                        </div>
+                    </div>
+                    <div class="prizes" >
+                        <div class="stage">
+                            <img src="assets/img/Rewards/Pk superstar theme.png" alt="frame">
+                            <span>Pk superstar theme</span>
+                        </div>
+                    </div>
+
+                <button class="arrow right">
+                    <img src="assets/img/btn/RightArrow.png" alt="right-arrow">
+                </button>
+            </div> 
+            <p class="reward-text">User recieves total 25% of the beans pot.</p>
+        </div>
+            <div class="tab-content "> This is talent view. </div>
+
+            <div class="round-btns">
+
+                <button class="round-1">
+                    
+                </button>
+                <button class="round-2">
+                        
+                </button>
+            </div>
+        </section>
+        <!-- Schedule section -->
+        <section class="schedule-section">
+            <div class="tab-btns-schedule">
+                <button class="dancing active tab1">
+                    
+                </button>
+                <button class="singing  tab1">
+
+                </button>
+                <button class="fashion tab1">
+
+                </button>
+            </div>
+            <div class="tab-schedule-content active">
+                <!-- <div class="schedule-grid">
+                    <table>
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div> -->
+                <div class="table">
+                    <div class="table-header">
+                      <div>
+                        <span class="date">Date</span>
+                        <span>Player 1</span>
+                      </div>
+                      <img
+                        class="vs-image"
+                        src="assets/img/Vs.png"
+                        alt="Vs"
+                        role="presentation"
+                      />
+                      <div>
+                        <span>Player 2</span>
+                        <span class="time">Time</span>
+                      </div>
+                    </div>
+        
+                    <template id="table-desc">
+                      <div class="table-desc">
+                        <div>
+                          <span class="date">Date</span>
+                          <div>
+                            <span class="player-1-name">Talent Name</span>
+                            <br />
+                            <span class="player-1-id">ID: 00000000</span>
+                          </div>
+                        </div>
+                        <img
+                          class="vs-image"
+                          src="assets/img/Vs.png"
+                          alt="Vs"
+                          role="presentation"
+                        />
+                        <div>
+                          <div>
+                            <span class="player-2-name">Talent Name</span>
+                            <br />
+                            <span class="player-2-id">ID: 00000000</span>
+                          </div>
+                          <span class="time">Time</span>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+            </div>
+            <div class="tab-schedule-content">This is singing schedule view</div>
+            <div class="tab-schedule-content">
+                This is fashion content
+            </div>
+        </section>
+
+        <section class="leaderboard-section">
+            <div class="tab-btns"> 
+                <button class="user active tab2">
+
+                </button>
+                <button class="talent tab2">
+                    
+                </button>
+            </div>
+
+            <div class="round-btns">
+
+                <button class="round-1">
+                    
+                </button>
+                <button class="round-2">
+                        
+                </button>
+            </div>
+
+            <div class="leaderboard">
+                <img class="leaderboard-tag" src="assets/img/tag/Leaderboard tag.png" alt="leaderboard">
+
+                <div class="beans-amount">
+                    <img src="assets/img/Beans pot amount.png" alt="beans-amount">
+                    <span>000,000,00</span>
+                </div>
+
+                <div class="topper-container">
+                    <div class="top top-1">
+                      <div class="avatar">
+                        <img src="./assets/img/default-avtar.png" alt="avatar" />
+                      </div>
+                      <div class="info">
+                        <span class="name">Name</span>
+                        <span class="id">ID</span>
+                        <span>
+                          <span class="beans"></span>
+                          <img
+                            class="bean-img"
+                            src="./assets/img/Beans icon.png"
+                            alt="beans"
+                            role="presentation"
+                          />
+                        </span>
+                      </div>
+                    </div>
+        
+                    <div class="top top-2">
+                      <div class="avatar">
+                        <img src="./assets/img/default-avtar.png" alt="avatar" />
+                      </div>
+                      <div class="info">
+                        <span class="name">Name</span>
+                        <span class="id">ID</span>
+                        <span>
+                          <span class="beans"></span>
+                          <img
+                            class="bean-img"
+                            src="./assets/img/Beans icon.png"
+                            alt="beans"
+                            role="presentation"
+                          />
+                        </span>
+                      </div>
+                    </div>
+        
+                    <div class="top top-3">
+                      <div class="avatar">
+                        <img src="./assets/img/default-avtar.png" alt="avatar" />
+                      </div>
+                      <div class="info">
+                        <span class="name">Name</span>
+                        <span class="id">ID</span>
+                        <span>
+                          <span class="beans"></span>
+                          <img
+                            class="bean-img"
+                            src="./assets/img/Beans icon.png"
+                            alt="beans"
+                            role="presentation"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="winner-container">
+                    <template id="winner-strip">
+                      <div class="winner-strip">
+                        <span class="position"></span>
+                        <div class="avatar">
+                          <img src="./assets/img/default-avtar.png" alt="avatar" />
+                        </div>
+                        <div class="info">
+                          <span class="name"></span>
+                          <span class="id"></span>
+                        </div>
+                        <span>
+                          <span class="beans"></span>
+                          <img
+                            class="bean-img"
+                            src="./assets/img/Beans icon.png"
+                            alt="beans"
+                            role="presentation"
+                          />
+                        </span>
+                      </div>
+                    </template>
+                  </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        All rights reserved by StreamKar.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

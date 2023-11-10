@@ -1,0 +1,508 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    background-image: url("./assets/img/bg.jpg");
+    background-position: center center;
+    background-size: 100% 100%;
+    /* height: 100vh; */
+    background-repeat: no-repeat;
+    min-height: 340vh;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 3vw;
+}
+
+header{
+    position: relative;
+}
+.header-img{
+    width: 100%;
+}
+.guide-button {
+    position: fixed;
+    border: 0;
+    outline: none;
+    background: none;
+    width: 17%;
+    height: 20px;
+    top: 40%;
+    right: 0;
+    z-index: 999;
+  }
+  .guide-button img {
+    width: 100%;
+  }
+
+  
+/* ---- Modal UI ---- */
+
+#modal {
+  /* padding: 3rem;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    max-width: 210px; */
+  /* background: url('assets/HTP\ BG.png');
+    background-size: cover;
+    background-repeat: no-repeat; */
+  border: 0;
+  background: transparent;
+  width: 100%;
+  margin: auto;
+}
+
+.close {
+  right: 12px;
+  background: none;
+  border: 0;
+  outline: 0;
+  position: absolute;
+  width: 30px;
+  top: 0px;
+}
+.close img {
+  width: 100%;
+}
+
+::backdrop {
+  background-color: #232323;
+  opacity: 0.75;
+}
+
+.howToPlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("./assets/img/Leaderboard\ and\ guide\ bg.png");
+  background-size: 100% 100%;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  gap: 16px;
+}
+.howToPlay img {
+  width: 50%;
+}
+.howToPlay ul {
+  max-width: 245px;
+  max-height: 400px;
+  overflow-y: auto;
+  color: #fff;
+}
+ul li {
+  padding: 1vh 0;
+}
+
+/* ----- Modal UI ends ----- */
+
+
+/* ---- Tab-btns ---- */
+
+button {
+  background: none;
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+.tab-btns{
+  background-image: url('./assets/img/Talent user btn bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 70%;
+  height: 45px;
+  margin: auto;
+  display: flex;
+}
+
+.tab,.tab2{
+  width: 52%;
+  /* height: 110%; */
+  transform: scale(1.1);
+  margin-top: -1px;
+
+}
+
+.talent.active {
+  background-image: url("./assets/img/btn/Talent btn.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+
+}
+.user.active {
+  background-image: url("./assets/img/btn/User btn.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+
+/* --- Round-btns --- */
+
+.round-btns{
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 32px;
+  padding-top: 24px;
+}
+.round-btns button{
+  height: 45px;
+}
+.round-1,.round-2{
+  width: 40%;
+}
+.round-1{
+  background-image: url('./assets/img/btn/Round 1 select btn.png');
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.round-2{
+  background-image: url('./assets/img/Round 2 unselect btn.png');
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* ----Rewards section---- */
+
+
+
+.tab-content,
+.tab-schedule-content {
+  display: none;
+  position: relative;
+}
+
+.tab-content.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./assets/img/Rewards bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  max-height: 300px;
+  height: 45vh;
+  margin: 20px;
+  flex-direction: column;
+}
+.reward-tag{
+  width: 50%;
+  position: absolute;
+  top: 0;
+}
+.reward-tag img{
+  width: 100%;
+}
+.rewards {
+  background: url("./assets/img/Rewards diaplay bg.png") center/100% 100% no-repeat ;
+  display: flex;
+  align-items: center;
+  width: 85%;
+  justify-content: space-between;
+  padding: 0 8vw;
+  position: relative;
+  max-height: 150px;
+  height: 100%;
+  margin-top: 20px;
+}
+.arrow {
+  max-width: 30px;
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+}
+.arrow.left{
+  left: -12px;
+}
+.arrow.right{
+  right: -12px;
+}
+.arrow img {
+  width: 100%;
+}
+
+.prizes {
+  display: none;
+  gap: 8px;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prizes.active{
+    display: flex;
+}
+.stage {
+  width: 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stage img {
+  width: 100%;
+}
+.stage span {
+  font-size: 12px;
+  margin-top:5px;
+  text-align: center;
+  font-weight: 600;
+  min-width: 115px;
+  color: goldenrod;
+}
+.reward-top{
+  position: absolute;
+    top: -4px;
+    width: 85px;
+    right: 36%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reward-top img{
+  width: 100%;
+  position: absolute;
+  right: 0;
+}
+.reward-top span{
+  z-index: 1;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+}
+.reward-text{
+  font-weight: 600;
+  color: #fff;
+}
+.tab-btns-schedule{
+  background: url('./assets/img/Category btn bg.png') center/100% 100% no-repeat;
+  width: 85%;
+  height: 50px;
+  margin: auto;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+}
+
+.tab1{
+  width: 25%;
+  height: 50px;
+  margin-top: 4px;
+}
+.dancing.active{
+  background: url('./assets/img/btn/Dance btn.png') center/100% 100% no-repeat;
+
+  transform: scale(1.2);
+}
+.singing.active{
+  background: url('./assets/img/btn/Singing battle btn.png') center/100% 100% no-repeat;
+  transform: scale(1.2);
+}
+.fashion.active{
+  background: url('./assets/img/btn/fashion battle btn.png') center/100% 100% no-repeat;
+  transform: scale(1.2);
+}
+
+/* ----Schedule content---- */
+
+.tab-schedule-content {
+  display: none;
+  margin: 20px;
+}
+.tab-schedule-content.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./assets/img/Schedule bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  max-height: 350px;
+  height: 50vh;
+}
+.tab-schedule-content .table {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-inline: auto;
+  gap: 4px;
+  padding-inline: 1px;
+  overflow-y: auto;
+}
+.tab-schedule-content .table-header,
+.tab-schedule-content .table-desc {
+  color: var(--color-accent);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-inline: 20px;
+  padding-block: 4px;
+  justify-content: space-between;
+  background: url("./assets/img/Schedule table bg.png") center/100% 100%
+    no-repeat;
+  font-size: 2.1vw;
+  color: #f6d957;
+}
+.tab-schedule-content .table-header {
+  font-size: 3.4vw;
+  font-weight: 600;
+}
+.table-header > div,
+.table-desc > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.vs-image {
+  max-height: 24px;
+}
+.versus {
+  max-width: 25px;
+}
+.versus img {
+  width: 100%;
+}
+/* ---- Leaderboard ---- */
+
+.leaderboard{
+  background: url('./assets/img/Leaderboard and guide bg.png') center/100% 100% no-repeat;
+  min-height: 88vh;
+  width: 86%;
+  margin: auto;
+  margin-top: 30px;
+  position: relative;
+}
+.leaderboard-tag{
+  position: absolute;
+  top: -13px;
+  width: 60%;
+  right: 20%;
+} 
+
+.beans-amount{
+  max-width: 65%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 36px;
+}
+.beans-amount img{
+  width: 100%;
+}
+.beans-amount span{
+  position: absolute;
+  color: #fff;
+  margin-left: 32px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.topper-container {
+  display: flex;
+  width: 95%;
+  gap: 10px;
+  margin: auto;
+  margin-top: 10px;
+}
+.topper-container .top {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  color: #fff;
+  padding-inline: 16px;
+  gap: 10px;
+}
+.topper-container .top-2 {
+  background: url("./assets/img/Top 2 bg.png") center/100% 100% no-repeat;
+  margin-top: 18%;
+  order: 1;
+}
+.topper-container .top-1 {
+  background: url("./assets/img/Top 1 bg.png") center/100% 100% no-repeat;
+  order: 2;
+}
+.topper-container .top-3 {
+  background: url("./assets/img/Top 3 bg.png") center/100% 100% no-repeat;
+  margin-top: 18%;
+  order: 3;
+}
+.avatar {
+  --size: 30px;
+  border-radius: 100px;
+  background-color: black;
+  border: 1px solid var(--color-accent);
+  height: var(--size);
+  width: var(--size);
+}
+.avatar img {
+  height: 100%;
+  width: 100%;
+}
+.top .avatar {
+  --size: 40px;
+  align-self: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  color: white;
+  font-weight: 600;
+}
+.bean-img {
+  max-height: 10px;
+}
+.tab-content.leaderboard-container {
+  padding-inline: 4px;
+}
+
+.winner-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: 450px; */
+  align-items: center;
+  overflow-y: scroll;
+  margin-top: 16px;
+  padding-inline: 16px;
+  gap: 8px;
+  
+  margin-bottom: 32px;
+  padding-bottom: 47px;
+}
+.winner-strip {
+  color: #f6d785;
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  align-items: center;
+  padding-inline: 14px;
+  /* padding-bottom: 10px; */
+  background: url("./assets/img/4th name onwards strip.png") center/100% 100%
+    no-repeat;
+  gap: 1em;
+}
+.winner-strip .info {
+  flex: 1;
+  color: inherit;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: goldenrod;
+  margin-bottom: 25px;
+}
